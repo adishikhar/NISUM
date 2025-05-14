@@ -3,7 +3,6 @@ package Sprint1_Day1;
 class Base {
     public String name = "Base Class";
     protected int age = 30;
-    private double salary = 50000;
     String city = "Delhi"; 
 
     static {
@@ -13,7 +12,6 @@ class Base {
     void show() {
         System.out.println("Name: " + name);
         System.out.println("Age: " + age);
-        // System.out.println("Salary: " + salary); // private can't be accessed here
         System.out.println("City: " + city);
     }
 }
