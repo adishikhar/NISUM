@@ -1,4 +1,4 @@
-package Sprint1_Day2;
+package Sprint1_Day1;
 
 class Vehicle {
     String fuel = "Diesel";

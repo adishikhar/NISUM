@@ -1,15 +1,51 @@
-package Sprint1_Day2;
+
+
+import java.util.*;
+
+class Item {
+    String name;
+    double price;
+    int quantity;
+
+    Item(String name, double price, int quantity) {
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+    }
+}
 
 public class Q1 {
-    public static void main(String[] args) {
-        String str = "Aditya";
+    static ArrayList<Item> cart = new ArrayList<>();
 
-        Class<?> cls = str.getClass();
+    static void addItem(String name, double price, int quantity) {
+        cart.add(new Item(name, price, quantity));
+    }
 
-        System.out.println("Full Class Name: " + cls.getName());
-        System.out.println("Simple Name: " + cls.getSimpleName());
-        System.out.println("Is it Interface? " + cls.isInterface());
-        System.out.println("Package: " + cls.getPackageName());
+    static void removeItem(String name) {
+        cart.removeIf(item -> item.name.equalsIgnoreCase(name));
+    }
 
+    static void viewCart() {
+        for (Item item : cart) {
+            System.out.println(item.name + " - ₹" + item.price + " x " + item.quantity);
         }
     }
+
+    static void calculateTotal() {
+        double total = 0;
+        for (Item item : cart) {
+            total += item.price * item.quantity;
+        }
+        System.out.println("Total: ₹" + total);
+    }
+
+    public static void main(String[] args) {
+        addItem("Shoes", 1500, 2);
+        addItem("Shirt", 800, 1);
+        viewCart();
+        calculateTotal();
+        removeItem("Shoes");
+        viewCart();
+    }
+}
+
