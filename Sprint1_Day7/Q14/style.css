@@ -1,0 +1,15 @@
+.box {
+  width: 150px;
+  height: 150px;
+  background-color: rgb(15, 30, 195);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+  transition: transform 0.3s ease;
+}
+
+.box:hover {
+  transform: rotate(10deg) scale(1.1) translateY(-10px);
+}

@@ -1,0 +1,15 @@
+.hover {
+  padding: 10px 20px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.hover:hover {
+  background-color: #0b9143;
+  transform: scale(1.1);
+}
