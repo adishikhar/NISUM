@@ -1,0 +1,15 @@
+.styled-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.styled-button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #00f2fe, #4facfe);
+}
