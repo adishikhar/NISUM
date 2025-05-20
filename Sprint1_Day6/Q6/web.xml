@@ -1,0 +1,34 @@
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+
+  <context-param>
+    <param-name>appTitle</param-name>
+    <param-value>My Web App</param-value>
+  </context-param>
+  
+  <!-- ParamServlet servlet config -->
+  <servlet>
+    <servlet-name>ParamServlet</servlet-name>
+    <servlet-class>com.nisum.ParamServlet</servlet-class>
+    <init-param>
+      <param-name>adminEmail</param-name>
+      <param-value>aditya@gmail.com</param-value>
+    </init-param>
+    <init-param>
+      <param-name>supportPhone</param-name>
+      <param-value>9142601061</param-value>
+    </init-param>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ParamServlet</servlet-name>
+    <url-pattern>/params</url-pattern>
+  </servlet-mapping>
+
+
+
+</web-app>

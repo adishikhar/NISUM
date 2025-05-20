@@ -1,0 +1,36 @@
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+
+  <context-param>
+    <param-name>appTitle</param-name>
+    <param-value>My Web App</param-value>
+  </context-param>
+
+  <!-- sendingServlet config -->
+  <servlet>
+    <servlet-name>sendingServlet</servlet-name>
+    <servlet-class>com.nisum.sendingServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>sendingServlet</servlet-name>
+    <url-pattern>/send</url-pattern>
+  </servlet-mapping>
+
+  <!-- TargetServlet config -->
+  <servlet>
+    <servlet-name>DestServlet</servlet-name>
+    <servlet-class>com.nisum.DestServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>DestServlet</servlet-name>
+    <url-pattern>/dest</url-pattern>
+  </servlet-mapping>
+
+
+</web-app>
