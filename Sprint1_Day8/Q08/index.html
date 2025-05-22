@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Filter Users by City</title>
+  <style>
+    select {
+      margin-bottom: 20px;
+      padding: 8px;
+      font-size: 16px;
+    }
+    li {
+      background: #f1f1f1;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Fileterd Name</h1>
+  <label for="citySelect">Filter by city:</label>
+  <select id="citySelect">
+    <option value="all">All Cities</option>
+  </select>
+
+  <ul id="userList">Loading users...</ul>
+
+  <script src="script.js"></script>
+</body>
+</html>

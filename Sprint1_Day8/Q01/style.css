@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #e0f7fa;
+  color: #333;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 150px;
+}
+
+.weather-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.city-info p {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.weather-info img {
+  width: 80px;
+}
+
+.details {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.detail-box {
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  width: 30%;
+}
+
+.forecast h2 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.forecast-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.card {
+  background: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  flex: 1;
+}
+
+.card img {
+  width: 50px;
+  height: 50px;
+}

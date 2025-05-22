@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Button Event Example</title>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center; 
+      align-items: center;     
+      background-color: #f0f0f0;
+    }
+
+    #submit {
+      padding: 12px 12px;
+      font-size: 20px;
+      border-radius: 20px;
+      background-color: orange;
+      color: white;
+      cursor: pointer;
+      transform: translateY(-200px);
+    }
+
+    #submit:hover {
+      background-color: #e60d0d;
+    }
+  </style>
+</head>
+<body>
+  <button id="submit">Submit</button>
+
+  <script>
+    document.getElementById("submit").addEventListener("click", function () {
+      alert("Submitted");
+    });
+  </script>
+</body>
+</html>
