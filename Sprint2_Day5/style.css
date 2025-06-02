@@ -18,14 +18,14 @@ ul {
 }
 
 li {
-  display: flex;                        /* ✅ Vertical list, aligned horizontally inside */
-  flex-direction: row;                 /* ✅ Task and ❌ aligned in a row */
+  display: flex;                       
+  flex-direction: row;                 
   align-items: center;
   margin: 6px 0;
   padding: 6px 10px;
   background-color: #f9f9f9;
   border-radius: 4px;
-  width: fit-content;                  /* ✅ Prevents full width stretch */
+  width: fit-content;                  
 }
 
 .task-text {
