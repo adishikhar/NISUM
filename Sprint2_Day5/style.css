@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+input {
+  padding: 5px;
+}
+
+button {
+  padding: 5px 10px;
+  margin-left: 5px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;                        /* ✅ Vertical list, aligned horizontally inside */
+  flex-direction: row;                 /* ✅ Task and ❌ aligned in a row */
+  align-items: center;
+  margin: 6px 0;
+  padding: 6px 10px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  width: fit-content;                  /* ✅ Prevents full width stretch */
+}
+
+.task-text {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  color: red;
+  cursor: pointer;
+  font-size: 16px;
+}
