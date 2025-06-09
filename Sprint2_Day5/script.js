@@ -2,7 +2,7 @@
 var todo = [];
 
 // Functions
-function addTask() {
+function addTodo() {
   var element = document.getElementById("task").value;
 
   if (element.trim() === "") {
