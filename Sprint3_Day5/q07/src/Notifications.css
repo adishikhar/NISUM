@@ -1,0 +1,29 @@
+.notification-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+}
+
+.notification-item {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fefefe;
+}
+
+.read {
+  background-color: #e0ffe0;
+}
+
+.unread {
+  background-color: #fff3cd;
+}
+
+.status {
+  font-size: 12px;
+  font-weight: bold;
+}
