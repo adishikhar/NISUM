@@ -1,0 +1,7 @@
+[
+  { "id": 1, "name": "Soap", "category": "Body-Essential", "price": 1099 },
+  { "id": 2, "name": "Rice", "category": "Grocery", "price": 999 },
+  { "id": 3, "name": "Brush", "category": "Body-Essential", "price": 899 },
+  { "id": 4, "name": "Salt", "category": "Grocery", "price": 1299 },
+  { "id": 5, "name": "Shoes", "category": "Footwear", "price": 199 }
+]
