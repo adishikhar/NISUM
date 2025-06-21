@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.light {
+  background: white;
+  color: black;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.dark {
+  background: black;
+  color: white;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+button {
+  margin-top: 10px;
+}
