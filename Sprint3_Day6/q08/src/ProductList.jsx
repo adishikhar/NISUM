@@ -1,40 +1,43 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
+
+import React, { useEffect, useState, useRef, useCallback } from "react";
 import ProductCard from "./ProductCard";
 
-function ProductList({ category }) {
-  const [items, setItems] = useState([]);
-  const [limit] = useState(5);
-  const [page, setPage] = useState(1);
+function ProductList({ selectedCategory }) {
+  const [products, setProducts] = useState([]);
+  const [skip, setSkip] = useState(0);
   const [loading, setLoading] = useState(false);
+
   const observer = useRef();
 
+  // Reset when category changes
   useEffect(() => {
-    setItems([]);
-    setPage(1);
-  }, [category]);
+    setProducts([]);
+    setSkip(0);
+  }, [selectedCategory]);
 
+  // Load data
   useEffect(() => {
     setLoading(true);
-    const url =
-      category === "All"
-        ? `https://fakestoreapi.com/products?limit=${limit}&sort=asc`
-        : `https://fakestoreapi.com/products/category/${encodeURIComponent(
-            category
-          )}?limit=${limit}&sort=asc`;
-    fetch(url + `&page=${page}`)
+    let url = `https://dummyjson.com/products?limit=10&skip=${skip}`;
+    if (selectedCategory !== "All") {
+      url = `https://dummyjson.com/products/category/${selectedCategory}?limit=10&skip=${skip}`;
+    }
+    fetch(url)
       .then(res => res.json())
       .then(data => {
-        if (data.length) setItems(prev => [...prev, ...data]);
+        setProducts(prev => [...prev, ...(data.products || data)]);
         setLoading(false);
-      });
-  }, [page, category, limit]);
+      })
+      .catch(() => setLoading(false));
+  }, [skip, selectedCategory]);
 
+  // Infinite scroll
   const lastRef = useCallback(
     node => {
       if (loading) return;
       if (observer.current) observer.current.disconnect();
-      observer.current = new IntersectionObserver(([entry]) => {
-        if (entry.isIntersecting) setPage(prev => prev + 1);
+      observer.current = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting) setSkip(prev => prev + 10);
       });
       if (node) observer.current.observe(node);
     },
@@ -43,12 +46,12 @@ function ProductList({ category }) {
 
   return (
     <div className="product-list">
-      {items.map((p, i) => (
-        <div key={p.id} ref={i === items.length - 1 ? lastRef : null}>
+      {products.map((p, i) => (
+        <div key={p.id} ref={i === products.length - 1 ? lastRef : null}>
           <ProductCard product={p} />
         </div>
       ))}
-      {loading && <p>Loading...</p>}
+      {loading && <p>Loading more...</p>}
     </div>
   );
 }

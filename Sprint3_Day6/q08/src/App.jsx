@@ -1,16 +1,18 @@
+
 import React, { useState } from "react";
 import ProductList from "./ProductList";
 import "./styles.css";
 
+const categories = ["All", "smartphones", "laptops", "fragrances"];
+
 export default function App() {
   const [category, setCategory] = useState("All");
-  const cats = ["All", "electronics", "jewelery", "men's clothing", "women's clothing"];
 
   return (
     <div>
-      <h1>Shop</h1>
+      <h1>Store</h1>
       <div className="tabs">
-        {cats.map(cat => (
+        {categories.map(cat => (
           <button
             key={cat}
             className={cat === category ? "active" : ""}
@@ -20,7 +22,7 @@ export default function App() {
           </button>
         ))}
       </div>
-      <ProductList category={category} />
+      <ProductList selectedCategory={category} />
     </div>
   );
 }
