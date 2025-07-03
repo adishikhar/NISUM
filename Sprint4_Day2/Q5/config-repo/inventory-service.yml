@@ -1,0 +1,3 @@
+feature:
+  enable-discount: true
+message: "Hello from Inventory Service!"

@@ -1,0 +1,3 @@
+feature:
+  enable-voucher: false
+message: "Hello from Order Service!"
